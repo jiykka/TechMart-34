@@ -1,0 +1,368 @@
+@font-face {
+  font-family: "PT-Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: url('../fonts/PT-Sans-400.woff2') format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT-Sans";
+  font-weight: 400;
+  font-style: italic;
+  src: url('../fonts/PT-Sans-Italic.woff2') format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT-Sans";
+  font-weight: 700;
+  font-style: normal;
+  src: url('../fonts/PT-Sans-700.woff2') format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fira-Sans";
+  font-weight: 900;
+  font-style: normal;
+  src: url('../fonts/Fira-Sans-700.woff2') format("woff2");
+  font-display: swap;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "PT-Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  font-style: normal;
+  background-color: #F2F2F2;
+  margin: 0;
+  color: #293449;
+  display: flex;
+  flex-direction: column;
+  min-width: 1400px;
+  min-height: 100%;
+
+}
+
+.visually-hidden {
+  visibility: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 1400px;
+  margin: 0 auto;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.head {
+  margin: 0 auto;
+  background-color: #F3F7F9;
+  display: flex;
+  flex-direction: column;
+}
+
+.head-contacts-box {
+  min-height: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  outline: 1px solid red;
+  margin-left: 117px;
+  margin-right: 117px;
+}
+
+.head-contacts-info {
+  color: #EE3643;
+  font-style: italic;
+  padding: 0;
+  margin: 0;
+  margin-right: 180px;
+  width: 478px;
+}
+
+.head-contacts-address {
+  color: #32425C;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  top: -2px;
+  max-width: 275px;
+}
+
+.head-contacts-phone {
+  text-decoration: none;
+  color: #293449;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: -2px;
+  max-width: 200px;
+  min-height: 20px;
+  margin-left: auto;
+}
+
+.head-contacts-phone::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/svg/phone.svg);
+  display: inline-block;
+  position: relative;
+  top: 1px;
+  margin-right: 9px;
+}
+
+.head-login-box {
+  width: 1400px;
+  background-color: #293449;
+}
+
+.head-login-inner {
+  outline: 1px solid rosybrown;
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+  margin-left: 117px;
+  margin-right: 117px;
+}
+
+.logo-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 220px;
+  min-height: 45px;
+  background-color: #EE3643;
+}
+
+.logo {
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.form-search {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.head-search-label {
+  display: flex;
+  align-items: center;
+}
+
+.head-search-label::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/svg/search-white.svg");
+  position: absolute;
+  left: 21px;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.head-search-label::after {
+  content: "Поиск:";
+  font-size: 16px;
+  line-height: 24px;
+  position: absolute;
+  left: 53px;
+  color: #F2F2F2;
+}
+
+.head-search {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  border: none;
+  background-color: #293449;
+  min-height: 45px;
+  padding: 0;
+  outline: none;
+  padding-left: 65px;
+  padding-right: 65px;
+  width: 587px;
+  position: relative;
+}
+
+
+.form-search-close {
+  position: absolute;
+  right: 19px;
+  top: 16px;
+  margin: 0;
+  cursor: pointer;
+  border: none;
+  width: 12px;
+  height: 12px;
+  background-color: transparent;
+  background-image: url("../images/svg/close.svg");
+  background-repeat: no-repeat;
+}
+
+.head-search::placeholder {
+  z-index: -1;
+}
+
+.head-search:focus-visible {
+  background-color: #F1F5F7;
+}
+
+.head-search:focus-visible.head-search::placeholder {
+  z-index: 1;
+}
+
+.head-search:focus-visible+.head-search-label::after {
+  display: none;
+}
+
+.head-search:focus-visible+.head-search-label::before {
+  background-image: url("../images/svg/search.svg");
+}
+
+.login {
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+  border: none;
+  padding: 0;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: #F1F5F7;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.login::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-image: url("../images/svg/login.svg");
+  position: relative;
+  margin-right: 10px;
+  top: -1px;
+}
+
+
+.logout {
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  color: #F1F5F7;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.logout::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-image: url("../images/svg/user.svg");
+  position: relative;
+  margin-right: 8px;
+}
+
+
+.logout::after {
+  content: "";
+  width: 16px;
+  height: 17px;
+  background-image: url("../images/svg/logout.svg");
+  position: relative;
+  margin-left: 20px;
+  top: 1px;
+}
+
+
+.head-navigation-box {
+  width: 1400px;
+  background-color: #3D546F;
+  position: relative;
+}
+
+.head-navigation-box::before {
+  content: "";
+  position: absolute;
+  background-color: #b52933;
+  left: 117px;
+  width: 220px;
+  height: 5px;
+  margin-right: 424px;
+}
+
+.head-navigation-inner {
+  outline: 1px solid green;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  margin-left: 117px;
+  margin-right: 117px;
+}
+
+.left-menu-navigtion {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+
+}
+
+.menu-navigation-list {
+  list-style: none;
+}
+
+.menu-navigtion-link {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 24px;
+  min-height: 70px;
+  padding: 25px;
+  outline: none;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 0px 2px 0px 1px;
+}
+
+.menu-navigtion-link:hover {
+  background-color: #32425C;
+}
+
+.menu-navigtion-link:active {
+  font-weight: 700;
+  border-width: 0px 1.4px 0px 1px;
+}
