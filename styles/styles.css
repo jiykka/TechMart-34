@@ -47,7 +47,6 @@ body {
   flex-direction: column;
   min-width: 1400px;
   min-height: 100%;
-
 }
 
 .visually-hidden {
@@ -66,7 +65,6 @@ body {
   margin: 0 auto;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-
 
 .head {
   margin: 0 auto;
@@ -207,7 +205,6 @@ body {
   position: relative;
 }
 
-
 .form-search-close {
   position: absolute;
   right: 19px;
@@ -270,7 +267,6 @@ body {
   top: -1px;
 }
 
-
 .logout {
   min-height: 45px;
   display: flex;
@@ -295,7 +291,6 @@ body {
   margin-right: 8px;
 }
 
-
 .logout::after {
   content: "";
   width: 16px;
@@ -305,7 +300,6 @@ body {
   margin-left: 20px;
   top: 1px;
 }
-
 
 .head-navigation-box {
   background-color: #3D546F;
@@ -337,7 +331,6 @@ body {
   align-items: center;
   margin: 0;
   padding: 0;
-
 }
 
 .menu-navigation-list {
@@ -353,7 +346,6 @@ body {
   line-height: 24px;
   padding: 25px;
   outline: none;
-
 }
 
 .menu-navigtion-link::before {
@@ -371,9 +363,7 @@ body {
 
 .menu-navigtion-link:active {
   font-weight: 700;
-
 }
-
 
 .right-menu-navigation {
   display: flex;
@@ -486,6 +476,7 @@ body {
   background-position: 100% 0;
 }
 
+
 .banner-title {
   font-weight: 700;
   font-size: 24px;
@@ -510,7 +501,6 @@ body {
   border: 1px solid #FFFFFF;
 }
 
-
 .banner-button::before {
   content: "";
   height: 16px;
@@ -534,7 +524,6 @@ body {
 
 .slider {
   position: relative;
-
 }
 
 .slider-navigation {
@@ -743,14 +732,12 @@ body {
 
 .main-catalog-filter {
   outline: 1px solid orange;
-  width: 220px;
-  height: 636px;
+  max-width: 220px;
 }
 
 .filter-products {
-  display:flex;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
 }
 
@@ -758,9 +745,10 @@ body {
   border: 0;
   padding: 0;
   margin: 0;
+  margin-bottom: 38px;
 }
 
-.filter-sort-title {
+.filter-block-title {
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
@@ -860,7 +848,7 @@ body {
   appearance: none;
 }
 
- .filter-cost-number::placeholder {
+.filter-cost-number::placeholder {
   color: #293449;
 }
 
@@ -874,16 +862,237 @@ body {
   -moz-appearance: textfield;
 }
 
+.product-filter-group {
+  margin: 0;
+  padding: 0;
+  border: none;
+  margin-bottom: 13px;
+}
+
+.product-filter-last {
+  margin-bottom: 29px;
+}
+
+.form-filter-title {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  color: #000000;
+  margin-bottom: 28px;
+  padding: 0;
+}
+
+.form-filter-color {
+  margin-bottom: 16px;
+}
+
+.form-filter-bluetooth {
+  margin-bottom: 18px;
+}
+
+.control {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  padding-left: 36px;
+  cursor: pointer;
+}
+
+.control-mark {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  border: 2px solid #3D546F;
+  background-color: transparent;
+}
+
+.control-mark-radio {
+  width: 18px;
+  height: 18px;
+  left: 0;
+}
+
+.control:hover .control-mark,
+.control:hover .control-label {
+  opacity: 0.6;
+}
+
+.control:active .control-mark,
+.control:active .control-label {
+  opacity: 0.4;
+}
+
+.form-filter-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-filter-item {
+  min-height: 40px;
+}
+
+.form-filter-radio-item {
+  margin-bottom: 20px;
+  min-height: 20px;
+}
+
+/* Checkbox */
+
+.control-input[type="checkbox"]:checked+.control-mark::before {
+  position: absolute;
+  top: 7px;
+  left: 6px;
+  width: 8px;
+  height: 2px;
+  background-color: #3D546F;
+  content: "";
+}
+
+.control-input[type="checkbox"]:checked+.control-mark::after {
+  position: absolute;
+  top: 8px;
+  left: 4px;
+  width: 5px;
+  height: 2px;
+  background-color: #3D546F;
+  content: "";
+}
+
+.control-input[type="checkbox"]:checked+.control-mark {
+  border: 2px solid #3D546F;
+}
+
+.control-input[type="checkbox"]:checked+.control-mark::before {
+  transform: rotate(-50deg);
+}
+
+.control-input[type="checkbox"]:checked+.control-mark::after {
+  transform: rotate(40deg);
+}
+
+/* Radio */
+
+.control-input[type="radio"]+.control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked+.control-mark::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 8px;
+  height: 8px;
+  background-color: #3D546F;
+  border-radius: 50%;
+  content: "";
+}
+
+.control-input[type="radio"]:checked+.control-mark {
+  border: 2px solid #3D546F;
+}
+
+.control-label {
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+  position: relative;
+  top: 2px;
+}
+
+.filter-btn {
+  border: 2px solid #32425C;
+  border-radius: 2px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: #32425C;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+}
+
+
+
 
 
 
 
 /* -- Catalog -- */
 
+
+
+
 .main-catalog-products {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   outline: 1px solid red;
   width: 870px;
-  height: 636px;
+}
+
+.main-catalog-block {
+  min-height: 40px;
+  outline: 1px solid purple;
+  margin-top: 34px;
+  margin-bottom: 31px;
+}
+
+.product-select {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 24px;
+  color: #293449;
+  border: 1px solid #3D546F;
+  border-radius: 2px;
+  padding: 7px 175px 7px 14px;
+  background-image: url(../images/svg/select-down.svg);
+  background-repeat: no-repeat;
+  background-position: 256px 15px;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+}
+
+.catalog-products {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 29px;
+
+}
+
+.catalog-product-card {
+  display: flex;
+  flex-direction: column;
+  width: 268px;
+  border: 1px solid #EAEAEA;
+  border-radius: 2px;
+  padding-top: 27px;
+  position: relative;
+
+}
+
+.label-product-new::after {
+  background-image: url("../images/svg/label-product-new.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  content: "";
+  width: 70px;
+  height: 70px;
+  top: 0;
+  right: 0;
 }
