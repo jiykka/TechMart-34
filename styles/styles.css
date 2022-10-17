@@ -135,17 +135,17 @@ body {
 
 .head-contacts-phone:hover,
 .footer-phone-link:hover {
-  opacity:0.8;
+  opacity: 0.8;
 }
 
 .head-contacts-phone:focus-visible,
 .footer-phone-link:focus-visible {
-  outline:1px solid #000000;
+  outline: 1px solid #000000;
 }
 
 .head-contacts-phone:active,
 .footer-phone-link:active {
-  opacity:0.4;
+  opacity: 0.4;
 }
 
 .head-login-box {
@@ -362,6 +362,21 @@ body {
   top: 2px;
 }
 
+.login:hover,
+.logout:hover {
+  opacity: 0.8;
+}
+
+.login:focus-visible,
+.logout:focus-visible {
+  outline: 1px solid #000000;
+}
+
+.login:active,
+.logout:active {
+  opacity: 0.4;
+}
+
 .head-navigation-box {
   background-color: #3D546F;
   position: relative;
@@ -405,7 +420,7 @@ body {
   padding: 20px 24px 25px 25px;
 }
 
-.pre-padding{
+.pre-padding {
   padding: 20px 23px 25px 20px;
 }
 
@@ -427,7 +442,7 @@ body {
 }
 
 .menu-navigtion-link:focus-visible {
-  outline:1px solid #000000;
+  outline: 1px solid #000000;
 }
 
 .menu-navigtion-link:active {
@@ -455,7 +470,7 @@ body {
   letter-spacing: 2px;
   margin-right: 25px;
   padding: 0;
-  outline:0;
+  outline: 0;
 }
 
 .right-menu-btn-ico {
@@ -517,7 +532,7 @@ body {
 
 .btn-green:focus-visible,
 .subscribe-btn:focus-visible {
-outline:1px solid #000000;
+  outline: 1px solid #000000;
 }
 
 .btn-green:active,
@@ -626,11 +641,11 @@ outline:1px solid #000000;
 }
 
 .banner-button:focus-visible {
-  outline:1px solid #000000;
+  outline: 1px solid #000000;
 }
 
-.banner-button:active{
-  opacity:0.6;
+.banner-button:active {
+  opacity: 0.6;
 }
 
 .banner-ico {
@@ -827,12 +842,12 @@ outline:1px solid #000000;
   max-width: 250px;
 }
 
-.slider-btn:hover{
+.slider-btn:hover {
   background-color: #CA2C37;
 }
 
 .slider-btn:focus-visible {
-  outline:1px solid #000000;
+  outline: 1px solid #000000;
 }
 
 .slider-btn:active {
@@ -944,7 +959,7 @@ outline:1px solid #000000;
 }
 
 .sort-price-cost-btn:focus-visible {
-  outline:1px solid #000000;
+  outline: 1px solid #000000;
 }
 
 .sort-price-cost-btn:active {
@@ -1158,7 +1173,7 @@ outline:1px solid #000000;
 }
 
 .control:focus-visible .control-mark {
-  outline:1px solid #000000;
+  outline: 1px solid #000000;
 }
 
 .control:active .control-mark,
@@ -1166,14 +1181,15 @@ outline:1px solid #000000;
   opacity: 0.4;
 }
 
-/* ДИСАБЛЕД НА ТЕКСТЕ !!! СДЕЛАТЬ */
-
-.control-input[type="radio"]:disabled + .control-mark,
-.control-input[type="checkbox"]:disabled + .control-mark {
-  opacity: 0.4;
+.control-input[type="radio"]:disabled+.control-mark,
+.control-input[type="checkbox"]:disabled+.control-mark {
+  opacity: 0.2;
 }
 
-/* ДИСАБЛЕД НА ТЕКСТЕ !!! СДЕЛАТЬ */
+.control-input[type="radio"]:disabled~.control-label,
+.control-input[type="checkbox"]:disabled~.control-label {
+  opacity: 0.4;
+}
 
 .filter-btn {
   border: 2px solid #32425C;
@@ -1230,12 +1246,22 @@ outline:1px solid #000000;
   border: 1px solid #3D546F;
   border-radius: 2px;
   padding: 7px 175px 7px 14px;
-  background-image: url(../images/svg/select-down.svg);
+  background-image: url("../images/svg/select-down.svg");
   background-repeat: no-repeat;
   background-position: 256px 15px;
   cursor: pointer;
   outline: none;
   appearance: none;
+}
+
+.product-select:hover {
+  border: 1px solid #63A63E;
+}
+
+.product-select:focus {
+  border: 1px solid #ffbf47;
+  box-shadow: inset 1px 1px 0px #63A63E, inset -1px -1px 0px #63A63E;
+  background-image: url("../images/svg/select-down-green.svg");
 }
 
 .catalog-products {
@@ -1338,25 +1364,25 @@ outline:1px solid #000000;
   width: 30px;
   background-color: #EE3643;
   border-radius: 4px;
-  transform:rotate(45deg);
+  transform: rotate(45deg);
   height: 30px;
-  z-index:-1;
+  z-index: -1;
 }
 
 .product-buy:hover,
-.product-buy:hover::after  {
+.product-buy:hover::after {
   background-color: #CA2C37;
 }
 
 .product-buy:focus-visible,
-.product-buy:focus-visible::after  {
-  outline:1px solid #000000;
+.product-buy:focus-visible::after {
+  outline: 1px solid #000000;
 }
 
 
 .product-buy:active,
-.product-buy:active::after{
-background: #BA2732;
+.product-buy:active::after {
+  background: #BA2732;
 }
 
 .product-block-hover {
@@ -1415,7 +1441,7 @@ background: #BA2732;
 }
 
 .hover-bookmark-btn:focus-visible {
-  outline:1px solid #000000;
+  outline: 1px solid #000000;
 }
 
 .hover-bookmark-btn:active {
@@ -1427,7 +1453,7 @@ background: #BA2732;
 }
 
 .hover-basket-btn:focus-visible {
-  outline:1px solid #000000;
+  outline: 1px solid #000000;
 }
 
 .hover-basket-btn:active {
@@ -1473,17 +1499,17 @@ background: #BA2732;
 }
 
 .pagination-link:hover {
-  background-color:#32425C;
-  color:#FFFFFF;
+  background-color: #32425C;
+  color: #FFFFFF;
 }
 
 .pagination-link:focus-visible {
-  outline:1px solid #000000;
+  outline: 1px solid #000000;
 }
 
 .pagination-link:active {
-  background-color:#EE3643;
-  color:#FFFFFF;
+  background-color: #EE3643;
+  color: #FFFFFF;
 }
 
 .btn-show-more {
@@ -1676,6 +1702,21 @@ background: #BA2732;
   z-index: 1;
 }
 
+.logo-link:hover,
+.footer-logo:hover {
+  background-color: #CA2C37;
+}
+
+.logo-link:focus-visible,
+.footer-logo:focus-visible {
+  outline: 1px solid #000000;
+}
+
+.logo-link:active,
+.footer-logo:active {
+  background-color: #BA2732;
+}
+
 .footer-address {
   margin: 0;
   font-size: 16px;
@@ -1724,15 +1765,15 @@ background: #BA2732;
 }
 
 .footer-social-link:hover {
-  background-color:rgba(41, 52, 73, 1);
+  background-color: rgba(41, 52, 73, 1);
 }
 
 .footer-social-link:focus-visible {
-  outline:1px solid #000000;
+  outline: 1px solid #000000;
 }
 
 .footer-social-link:active {
-  background-color:rgba(41, 52, 73, 0.4);
+  background-color: rgba(41, 52, 73, 0.4);
 }
 
 .footer-right-box {
@@ -1785,10 +1826,20 @@ background: #BA2732;
   border-radius: 2px;
   position: relative;
   right: -5px;
+  outline: none;
 }
 
 .form-subscribe-input::placeholder {
   color: #BDBDBD;
+}
+
+.form-subscribe-input:hover {
+  border: 1px solid #63A63E;
+}
+
+.form-subscribe-input:focus {
+  border: 1px solid #ffbf47;
+  box-shadow: inset 1px 1px 0px #63A63E, inset -1px -1px 0px #63A63E;
 }
 
 .subscribe-btn {
@@ -1827,10 +1878,10 @@ background: #BA2732;
 
 .footer-end-link:focus-visible,
 .footer-feedback-link:focus-visible {
-  outline:1px solid #000000;
+  outline: 1px solid #000000;
 }
 
 .footer-end-link:active,
 .footer-feedback-link:active {
-  opacity:0.4;
+  opacity: 0.4;
 }
